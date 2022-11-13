@@ -1,14 +1,5 @@
 package com.example.myvulnerableapplication;
 
-/*
-Author: Marco Antonio Almazan Martinez & Mariana Soto Ochoa
-Class Name : RegisterRequest
-Purpose: The purpose of this class is to handle the request from the App to the API in order to register a new user. This class DO NOT
-         implements Serializable to serialize the objects in order to convert into JSON, because the Library (Retrofit) that is been
-         using to make the request to the API offers the ability to pass objects within the request body, the only request is to create
-         the attributes with their corresponding getters and setters.
- */
-
 public class RegisterRequest {
     private String idUsuario;
     private String nombre;

@@ -2,13 +2,6 @@ package com.example.myvulnerableapplication;
 
 import java.io.Serializable;
 
-/*
-Author: Marco Antonio Almazan Martinez & Mariana Soto Ochoa
-Class Name : LoginResponse
-Purpose: The purpose of this class is to handle the response from the API that returns if a User has been log in or not. This class
-         implements Serializable to serialize the objects in order to convert into JSON. Also this class has the attributes with
-         the getters and setters to handle the JSON response.
- */
 
 public class LoginResponse implements Serializable {
     private String name;

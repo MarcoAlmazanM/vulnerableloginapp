@@ -16,13 +16,7 @@ import androidx.appcompat.app.AppCompatDelegate;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-/*
-Author: Marco Antonio Almazan Martinez & Mariana Soto Ochoa
-Class Name : LoginActivity
-Purpose: The purpose of this class is to handle all the steps about the Log in process, from the user enter the required information
-(username, password), making the request to the API, handle the response from the API and finally authorizing or not the access to the
-app.
- */
+
 public class LoginActivity extends AppCompatActivity {
 
     EditText edUsername, edPassword;
@@ -30,12 +24,6 @@ public class LoginActivity extends AppCompatActivity {
     SharedPreferences.Editor editor;
     String message;
 
-    /*
-    Author: Marco Antonio Almazan Martinez & Mariana Soto Ochoa
-    Method Name : onCreate
-    Purpose: The purpose of this method is to set the View that is going to appear on the Screen, and also is going to call the
-    loginIntent method.
-     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,12 +38,7 @@ public class LoginActivity extends AppCompatActivity {
 
         loginIntent();
     }
-    /*
-    Author: Marco Antonio Almazan Martinez & Mariana Soto Ochoa
-    Method Name : btnLogin
-    Purpose: This method is called when the user click on the Sign In Button and the purpose is to verify that all the inputs are filled
-    out, if all the inputs are filled out the method create a LoginRequest and call the method loginUser to continue with the process.
-     */
+
     public void btnLogin(View view){
         edUsername = findViewById(R.id.eTUsername);
         edPassword = findViewById(R.id.eTPassword);
@@ -65,28 +48,17 @@ public class LoginActivity extends AppCompatActivity {
         } else {
             LoginRequest loginRequest = new LoginRequest();
             loginRequest.setUsername(edUsername.getText().toString());
-            Utils utils = new Utils();
-            String password = utils.hash256(edPassword.getText().toString());
+            String password = edPassword.getText().toString();
             loginRequest.setPassword(password);
             loginUser(loginRequest);
         }
     }
-    /*
-    Author: Marco Antonio Almazan Martinez & Mariana Soto Ochoa
-    Method Name : btnRegister
-    Purpose: This method is called when the user click on the New Account Button and the purpose is to redirect the user to the Register
-    Screen.
-     */
+
     public void btnRegister(View view){
         Intent register = new Intent(LoginActivity.this, RegisterActivity.class);
         startActivity(register);
     }
-    /*
-    Author: Marco Antonio Almazan Martinez & Mariana Soto Ochoa
-    Method Name : loginIntent
-    Purpose: The purpose of this method is to handle the Login Intent, also this method handles the Login Response to authorize the
-    access to the app.
-     */
+
     public void loginIntent(){
         Intent intent = getIntent();
         if (intent.getExtras() != null) {
@@ -118,12 +90,7 @@ public class LoginActivity extends AppCompatActivity {
             }
         }
     }
-    /*
-    Author: Marco Antonio Almazan Martinez & Mariana Soto Ochoa
-    Method Name : loginUser
-    Purpose: The purpose of this method is to make the request to the APIClient to verify if a User is able to enter to the app.
-    This method handles the response of the API call and set the data to verify the Log In.
-     */
+
     public void loginUser(LoginRequest loginRequest) {
         Call<LoginResponse> loginResponseCall = ApiClient.getService().loginUser(loginRequest);
         loginResponseCall.enqueue(new Callback<LoginResponse>() {
@@ -146,11 +113,7 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
     }
-    /*
-    Author: Marco Antonio Almazan Martinez & Mariana Soto Ochoa
-    Method Name : onBackPressed
-    Purpose: The purpose of this method is to close the app when a user press the back button on the app.
-     */
+
     @Override
     public void onBackPressed(){
         finishAffinity();
