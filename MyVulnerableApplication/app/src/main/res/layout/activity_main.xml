@@ -1,0 +1,680 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:gl="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/parent.contentLayout"
+    android:background="@color/contentBodyColor"
+    tools:context=".MainActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_topbk">
+
+                <TextView
+                    style="@style/viewParent.headerText"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:text="@string/bdt"
+                    android:id="@+id/tvUsername"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/hourglass"
+                    android:adjustViewBounds="true" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginRight="10dp"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cVAdmin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="15dp"
+                        app:cardPreventCornerOverlap="true"
+                        android:layout_marginTop="10dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:minHeight="100dp"
+                            android:background="@drawable/home_gradient_admin"
+                            android:padding="10dp">
+
+                            <ImageView
+                                style="@style/homeCardImage"
+                                android:maxHeight="90dp"
+                                android:src="@drawable/administration"/>
+
+                            <TextView
+                                android:id="@+id/textViewSub1Title"
+                                style="@style/viewParent.headerText.HomeCardTitle"
+                                android:shadowColor="#000"
+                                android:shadowDx="-2"
+                                android:shadowDy="-2"
+                                android:shadowRadius="1"
+                                android:text="@string/menuAdmin"
+                                android:textSize="20dp" />
+
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cVMate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="15dp"
+                        app:cardPreventCornerOverlap="true"
+                        android:layout_marginTop="10dp">
+
+                        <net.colindodd.gradientlayout.GradientRelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:minHeight="100dp"
+                            gl:end_color="@color/gradientLightYellow2"
+                            gl:start_color="@color/gradientLightOrange2"
+                            gl:orientation="LEFT_RIGHT"
+                            android:padding="10dp">
+
+                            <ImageView
+                                style="@style/homeCardImage"
+                                android:maxHeight="90dp"
+                                android:src="@drawable/maths" />
+
+                            <TextView
+                                android:id="@+id/textViewSub3Title"
+                                style="@style/viewParent.headerText.HomeCardTitle"
+                                android:text="@string/menuMate"
+                                android:shadowColor="#000"
+                                android:shadowDx="-2"
+                                android:shadowDy="-2"
+                                android:shadowRadius="1"
+                                android:textSize="20dp" />
+
+
+                        </net.colindodd.gradientlayout.GradientRelativeLayout>
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cVActu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="15dp"
+                        app:cardPreventCornerOverlap="true"
+                        android:layout_marginTop="10dp">
+
+                        <net.colindodd.gradientlayout.GradientRelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:minHeight="100dp"
+                            gl:start_color="@color/gradientViolet"
+                            gl:end_color="@color/gradientLightBlue"
+                            gl:orientation="LEFT_RIGHT"
+                            android:padding="10dp">
+
+                            <ImageView
+                                style="@style/homeCardImage"
+                                android:maxHeight="90dp"
+                                android:src="@drawable/law" />
+
+                            <TextView
+                                android:id="@+id/textViewSub5Title"
+                                style="@style/viewParent.headerText.HomeCardTitle"
+                                android:text="@string/menuActu"
+                                android:shadowColor="#000"
+                                android:shadowDx="-2"
+                                android:shadowDy="-2"
+                                android:shadowRadius="1"
+                                android:textSize="20dp" />
+
+                        </net.colindodd.gradientlayout.GradientRelativeLayout>
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cVArte"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="15dp"
+                        app:cardPreventCornerOverlap="true"
+                        android:layout_marginTop="10dp">
+
+                        <net.colindodd.gradientlayout.GradientRelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:minHeight="100dp"
+                            gl:end_color="@color/gradientLightYellow2"
+                            gl:start_color="@color/gradientLightOrange2"
+                            gl:orientation="LEFT_RIGHT"
+                            android:padding="10dp">
+
+                            <ImageView
+                                android:maxHeight="90dp"
+                                android:src="@drawable/arts"
+                                style="@style/homeCardImage"/>
+
+                            <TextView
+                                style="@style/viewParent.headerText.HomeCardTitle"
+                                android:shadowColor="#000"
+                                android:shadowDx="-2"
+                                android:shadowDy="-2"
+                                android:shadowRadius="1"
+                                android:text="@string/menuADCo"
+                                android:textSize="20dp" />
+
+
+                        </net.colindodd.gradientlayout.GradientRelativeLayout>
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="vertical">
+
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="15dp"
+                        app:cardPreventCornerOverlap="true"
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/cVCompu">
+
+                        <net.colindodd.gradientlayout.GradientRelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:minHeight="100dp"
+                            gl:start_color="@color/gradientLightYellow"
+                            gl:end_color="@color/gradientOrange"
+                            gl:orientation="LEFT_RIGHT"
+                            android:padding="10dp">
+
+                            <ImageView
+                                style="@style/homeCardImage"
+                                android:maxHeight="90dp"
+                                android:src="@drawable/computing" />
+
+                            <TextView
+                                android:id="@+id/textViewSub2Title"
+                                style="@style/viewParent.headerText.HomeCardTitle"
+                                android:text="@string/menuCompu"
+                                android:shadowColor="#000"
+                                android:shadowDx="-2"
+                                android:shadowDy="-2"
+                                android:shadowRadius="1"
+                                android:textSize="20dp" />
+
+                        </net.colindodd.gradientlayout.GradientRelativeLayout>
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="15dp"
+                        app:cardPreventCornerOverlap="true"
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/cVInge">
+
+                        <net.colindodd.gradientlayout.GradientRelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:minHeight="100dp"
+                            gl:start_color="@color/gradientLightOrange2"
+                            gl:end_color="@color/gradientOrange3"
+                            gl:orientation="LEFT_RIGHT"
+                            android:padding="10dp">
+
+                            <ImageView
+                                style="@style/homeCardImage"
+                                android:maxHeight="90dp"
+                                android:src="@drawable/engineering" />
+
+                            <TextView
+                                android:id="@+id/textViewSub4Title"
+                                style="@style/viewParent.headerText.HomeCardTitle"
+                                android:text="@string/menuInge"
+                                android:shadowColor="#000"
+                                android:shadowDx="-2"
+                                android:shadowDy="-2"
+                                android:shadowRadius="1"
+                                android:textSize="20dp" />
+
+
+                        </net.colindodd.gradientlayout.GradientRelativeLayout>
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="15dp"
+                        app:cardPreventCornerOverlap="true"
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/cVEdu">
+
+                        <net.colindodd.gradientlayout.GradientRelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:minHeight="100dp"
+                            gl:start_color="@color/gradientLightGreen"
+                            gl:end_color="@color/gradientLightBlue"
+                            gl:orientation="LEFT_RIGHT"
+                            android:padding="10dp">
+
+                            <ImageView
+                                style="@style/homeCardImage"
+                                android:maxHeight="90dp"
+                                android:src="@drawable/education" />
+
+                            <TextView
+                                android:id="@+id/textViewSub6Title"
+                                style="@style/viewParent.headerText.HomeCardTitle"
+                                android:text="@string/menuEduc"
+                                android:shadowColor="#000"
+                                android:shadowDx="-2"
+                                android:shadowDy="-2"
+                                android:shadowRadius="1"
+                                android:textSize="20dp" />
+
+                        </net.colindodd.gradientlayout.GradientRelativeLayout>
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="15dp"
+                        app:cardPreventCornerOverlap="true"
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/cVComida"
+                        >
+
+                        <net.colindodd.gradientlayout.GradientRelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:minHeight="100dp"
+                            gl:start_color="@color/gradientLightOrange2"
+                            gl:end_color="@color/gradientOrange3"
+                            gl:orientation="LEFT_RIGHT"
+                            android:padding="10dp">
+
+                            <ImageView
+                                style="@style/homeCardImage"
+                                android:maxHeight="90dp"
+                                android:src="@drawable/food" />
+
+                            <TextView
+                                style="@style/viewParent.headerText.HomeCardTitle"
+                                android:text="@string/menuCom"
+                                android:shadowColor="#000"
+                                android:shadowDx="-2"
+                                android:shadowDy="-2"
+                                android:shadowRadius="1"
+                                android:textSize="20dp" />
+
+
+                        </net.colindodd.gradientlayout.GradientRelativeLayout>
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginRight="10dp"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cVLimp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="15dp"
+                        app:cardPreventCornerOverlap="true"
+                        android:layout_marginTop="10dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:minHeight="100dp"
+                            android:background="@drawable/home_gradient_admin"
+                            android:padding="10dp">
+
+                            <ImageView
+                                style="@style/homeCardImage"
+                                android:maxHeight="90dp"
+                                android:src="@drawable/cleaning" />
+
+                            <TextView
+                                android:id="@+id/textViewSub7Title"
+                                style="@style/viewParent.headerText.HomeCardTitle"
+                                android:text="@string/menuLim"
+                                android:shadowColor="#000"
+                                android:shadowDx="-2"
+                                android:shadowDy="-2"
+                                android:shadowRadius="1"
+                                android:textSize="20dp" />
+
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cVDepo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="15dp"
+                        app:cardPreventCornerOverlap="true"
+                        android:layout_marginTop="10dp">
+
+                        <net.colindodd.gradientlayout.GradientRelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:minHeight="100dp"
+                            gl:end_color="@color/gradientLightYellow2"
+                            gl:start_color="@color/gradientLightOrange2"
+                            gl:orientation="LEFT_RIGHT"
+                            android:padding="10dp">
+
+                            <ImageView
+                                style="@style/homeCardImage"
+                                android:maxHeight="90dp"
+                                android:src="@drawable/sports" />
+
+                            <TextView
+                                android:id="@+id/textViewSub8Title"
+                                style="@style/viewParent.headerText.HomeCardTitle"
+                                android:text="@string/menuDep"
+                                android:shadowColor="#000"
+                                android:shadowDx="-2"
+                                android:shadowDy="-2"
+                                android:shadowRadius="1"
+                                android:textSize="20dp" />
+
+
+                        </net.colindodd.gradientlayout.GradientRelativeLayout>
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cVVent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="15dp"
+                        app:cardPreventCornerOverlap="true"
+                        android:layout_marginTop="10dp">
+
+                        <net.colindodd.gradientlayout.GradientRelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:minHeight="100dp"
+                            gl:start_color="@color/gradientViolet"
+                            gl:end_color="@color/gradientLightBlue"
+                            gl:orientation="LEFT_RIGHT"
+                            android:padding="10dp">
+
+                            <ImageView
+                                style="@style/homeCardImage"
+                                android:maxHeight="90dp"
+                                android:src="@drawable/sales" />
+
+                            <TextView
+                                android:id="@+id/textViewSub9Title"
+                                style="@style/viewParent.headerText.HomeCardTitle"
+                                android:text="@string/menuVen"
+                                android:shadowColor="#000"
+                                android:shadowDx="-2"
+                                android:shadowDy="-2"
+                                android:shadowRadius="1"
+                                android:textSize="20dp" />
+
+                        </net.colindodd.gradientlayout.GradientRelativeLayout>
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cVMant"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="15dp"
+                        app:cardPreventCornerOverlap="true"
+                        android:layout_marginTop="10dp">
+
+                        <net.colindodd.gradientlayout.GradientRelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:minHeight="100dp"
+                            gl:end_color="@color/gradientLightYellow2"
+                            gl:start_color="@color/gradientLightOrange2"
+                            gl:orientation="LEFT_RIGHT"
+                            android:padding="10dp">
+
+                            <ImageView
+                                android:maxHeight="90dp"
+                                android:src="@drawable/repairs"
+                                style="@style/homeCardImage"/>
+
+                            <TextView
+                                style="@style/viewParent.headerText.HomeCardTitle"
+                                android:shadowColor="#000"
+                                android:shadowDx="-2"
+                                android:shadowDy="-2"
+                                android:shadowRadius="1"
+                                android:text="@string/menuIMRe"
+                                android:textSize="20dp" />
+
+
+                        </net.colindodd.gradientlayout.GradientRelativeLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cVTran"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="15dp"
+                        app:cardPreventCornerOverlap="true"
+                        android:layout_marginTop="10dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:minHeight="100dp"
+                            android:background="@drawable/home_gradient_admin"
+                            android:padding="10dp">
+
+                            <ImageView
+                                style="@style/homeCardImage"
+                                android:maxHeight="90dp"
+                                android:src="@drawable/transportation" />
+
+                            <TextView
+                                android:id="@+id/textViewSub13Title"
+                                style="@style/viewParent.headerText.HomeCardTitle"
+                                android:shadowColor="#000"
+                                android:shadowDx="-2"
+                                android:shadowDy="-2"
+                                android:shadowRadius="1"
+                                android:text="@string/menuTraPM"
+                                android:textSize="20dp" />
+
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="vertical">
+
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="15dp"
+                        app:cardPreventCornerOverlap="true"
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/cVCons">
+
+                        <net.colindodd.gradientlayout.GradientRelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:minHeight="100dp"
+                            gl:start_color="@color/gradientLightYellow"
+                            gl:end_color="@color/gradientOrange"
+                            gl:orientation="LEFT_RIGHT"
+                            android:padding="10dp">
+
+                            <ImageView
+                                style="@style/homeCardImage"
+                                android:maxHeight="90dp"
+                                android:src="@drawable/construction" />
+
+                            <TextView
+                                android:id="@+id/textViewSub10Title"
+                                style="@style/viewParent.headerText.HomeCardTitle"
+                                android:shadowColor="#000"
+                                android:shadowDx="-2"
+                                android:shadowDy="-2"
+                                android:shadowRadius="1"
+                                android:text="@string/menuCons"
+                                android:textSize="20dp" />
+
+                        </net.colindodd.gradientlayout.GradientRelativeLayout>
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="15dp"
+                        app:cardPreventCornerOverlap="true"
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/cVPer">
+
+                        <net.colindodd.gradientlayout.GradientRelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:minHeight="100dp"
+                            gl:start_color="@color/gradientLightOrange2"
+                            gl:end_color="@color/gradientOrange3"
+                            gl:orientation="LEFT_RIGHT"
+                            android:padding="10dp">
+
+                            <ImageView
+                                style="@style/homeCardImage"
+                                android:maxHeight="90dp"
+                                android:src="@drawable/personal_care" />
+
+                            <TextView
+                                android:id="@+id/textViewSub11Title"
+                                style="@style/viewParent.headerText.HomeCardTitle"
+                                android:text="@string/menuCui"
+                                android:shadowColor="#000"
+                                android:shadowDx="-2"
+                                android:shadowDy="-2"
+                                android:shadowRadius="1"
+                                android:textSize="20dp" />
+
+
+                        </net.colindodd.gradientlayout.GradientRelativeLayout>
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="15dp"
+                        app:cardPreventCornerOverlap="true"
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/cVAgri">
+
+                        <net.colindodd.gradientlayout.GradientRelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:minHeight="100dp"
+                            gl:start_color="@color/gradientLightGreen"
+                            gl:end_color="@color/gradientLightBlue"
+                            gl:orientation="LEFT_RIGHT"
+                            android:padding="10dp">
+
+                            <ImageView
+                                style="@style/homeCardImage"
+                                android:maxHeight="90dp"
+                                android:src="@drawable/agriculture" />
+
+                            <TextView
+                                android:id="@+id/textViewSub12Title"
+                                style="@style/viewParent.headerText.HomeCardTitle"
+                                android:shadowColor="#000"
+                                android:shadowDx="-2"
+                                android:shadowDy="-2"
+                                android:shadowRadius="1"
+                                android:text="@string/menuAPSi"
+                                android:textSize="20dp" />
+
+                        </net.colindodd.gradientlayout.GradientRelativeLayout>
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="15dp"
+                        app:cardPreventCornerOverlap="true"
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/cVPMate">
+
+                        <net.colindodd.gradientlayout.GradientRelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:minHeight="100dp"
+                            gl:start_color="@color/gradientLightOrange2"
+                            gl:end_color="@color/gradientOrange3"
+                            gl:orientation="LEFT_RIGHT"
+                            android:padding="10dp">
+
+                            <ImageView
+                                style="@style/homeCardImage"
+                                android:maxHeight="90dp"
+                                android:src="@drawable/materials" />
+
+                            <TextView
+                                style="@style/viewParent.headerText.HomeCardTitle"
+                                android:text="@string/menuPro"
+                                android:shadowColor="#000"
+                                android:shadowDx="-2"
+                                android:shadowDy="-2"
+                                android:shadowRadius="1"
+                                android:textSize="20dp" />
+
+
+                        </net.colindodd.gradientlayout.GradientRelativeLayout>
+                    </androidx.cardview.widget.CardView>
+
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

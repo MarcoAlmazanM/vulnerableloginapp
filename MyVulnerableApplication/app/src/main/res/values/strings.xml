@@ -1,0 +1,47 @@
+<resources>
+    //New Login
+    <string name="app_name" translatable="false">Banco de Tiempo</string>
+    <string name="login_email_hint" translatable="false">correo</string>
+    <string name="login_password_hint" translatable="false">Contraseña</string>
+    <string name="accounthave" translatable="false">¿Ya tienes\n una cuenta?</string>
+    <string name="passforg" translatable="false">¿Olvidaste tu contraseña?</string>
+    <string name="nlogin" translatable="false">Iniciar Sesión</string>
+    <string name="nusuar" translatable="false">¿Usuario nuevo? Regístrate ahora</string>
+    <string name="user_name" translatable="false">Nombre del Usuario</string>
+
+    //Registro
+    <string name="nombreLogin" translatable="false">Nombre</string>
+    <string name="passwordLogin" translatable="false">Contraseña</string>
+    <string name="registroReg" translatable="false">Registro</string>
+    <string name="registroTeryPol" translatable="false">Acepto las condiciones de uso y la política de privacidad.</string>
+    <string name="username" translatable="false">Usuario</string>
+    <string name="correo" translatable="false">correo</string>
+    <string name="apellidoMaterno" translatable="false">Apellido Materno</string>
+    <string name="apellidoPaterno" translatable="false">Apellido Paterno</string>
+    <string name="nombreUsuario" translatable="false">Nombre de Usuario</string>
+
+    <string name="registrate" translatable="false">¡Bienvenido a la App!\n Regístrate para continuar</string>
+    <string name="goback" translatable="false">¿Ya tienes una cuenta?</string>
+    <string name="registerString" translatable="false">Registrarse</string>
+    //Home Page
+    <string name="bdt" translatable="false">Banco\nde Tiempo</string>
+    //Home Page Categories
+    <string name="menuTodo" translatable="false">Todo</string>
+    <string name="menuAdmin" translatable="false">Administración</string>
+    <string name="menuCompu" translatable="false">Computación</string>
+    <string name="menuMate" translatable="false">Matemáticas</string>
+    <string name="menuInge" translatable="false">Ingeniería</string>
+    <string name="menuActu" translatable="false">Acturaría</string>
+    <string name="menuEduc" translatable="false">Educación</string>
+    <string name="menuADCo" translatable="false">Artes,\nDiseño,\ny Comunicación</string>
+    <string name="menuCom" translatable="false">Comida</string>
+    <string name="menuLim" translatable="false">Limpieza</string>
+    <string name="menuCons" translatable="false">Construcción</string>
+    <string name="menuDep" translatable="false">Deportes</string>
+    <string name="menuCui" translatable="false">Cuidado\nPersonal</string>
+    <string name="menuVen" translatable="false">Ventas</string>
+    <string name="menuAPSi" translatable="false">Agricultura,\nPesca,\ny Silvicultura</string>
+    <string name="menuIMRe" translatable="false">Instalación,\nMantenimiento,\ny Reparación</string>
+    <string name="menuPro" translatable="false">Producción\nde Materiales</string>
+    <string name="menuTraPM" translatable="false">Transporte\nde Personas\ny Materiales</string>
+</resources>
