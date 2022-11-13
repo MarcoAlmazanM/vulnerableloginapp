@@ -17,7 +17,6 @@ class ModelApp{
         $query = "SELECT * FROM usuario WHERE idUsuario = '" . $user . "'AND contrasena = '" . $pass . "'";
         mysqli_set_charset($this->connection, 'utf8');
         $sql = mysqli_query($this->connection, $query);
-        
 
         if(mysqli_fetch_assoc($sql)){
             $row =  mysqli_fetch_object($sql) ;
@@ -39,12 +38,10 @@ class ModelApp{
         mysqli_set_charset($this->connection, 'utf8');
         $sql = mysqli_query($this->connection, $query);
 
-        if($sql->num_rows){
+        if(mysqli_affected_rows($this->connection) > 0 ){
             $arr = array('registerApproval' => 1);
         }else{
-            if(mysqli_errno($this->connection) == 23000){
-                $arr = array('registerApproval' => 0, 'error' => 'Usuario duplicado'); 
-            }
+            $arr = array('registerApproval' => 0, 'error' => 'Usuario duplicado'); 
         }
 
         header("Content-Type: application/json");
